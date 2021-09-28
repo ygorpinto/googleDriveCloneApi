@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
-  get :root, to: 'home#index'
+  devise_for :users
+  root to: 'home#index'
   post 'upload', to: 'upload#index'
 end
